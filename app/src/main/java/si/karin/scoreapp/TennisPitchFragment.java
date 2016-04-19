@@ -49,8 +49,4 @@ public class TennisPitchFragment extends PitchFragment implements MatchPitchCall
         scoreLayout.startAnimation(a);
     }
 
-    @Override
-    public void setCallback(MainActivity activity) {
-        activity.setMatchPitchCallback(this);
-    }
 }

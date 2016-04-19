@@ -48,9 +48,4 @@ public class BasketballPitchFragment extends PitchFragment implements MatchPitch
         a.setAnimationListener(showListener);
         scoreLayout.startAnimation(a);
     }
-
-    @Override
-    public void setCallback(MainActivity activity) {
-        activity.setMatchPitchCallback(this);
-    }
 }

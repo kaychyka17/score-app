@@ -39,10 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -124,12 +120,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public Object instantiateItem(ViewGroup container, int position) {
             Log.e("POSITION", "pos "+position);
             return super.instantiateItem(container, position);
-        }
-
-        @Override
-        public boolean  isViewFromObject(View view, Object object) {
-//            Log.e()
-            return super.isViewFromObject(view, object);
         }
 
         @Override

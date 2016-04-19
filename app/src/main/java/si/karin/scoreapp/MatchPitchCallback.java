@@ -6,6 +6,4 @@ package si.karin.scoreapp;
 public interface MatchPitchCallback {
 
     void setResult(int home, int away);
-
-    void setCallback(MainActivity activity);
 }

@@ -48,9 +48,4 @@ public class FootballPitchFragment extends PitchFragment implements MatchPitchCa
         a.setAnimationListener(showListener);
         scoreLayout.startAnimation(a);
     }
-
-    @Override
-    public void setCallback(MainActivity activity) {
-        activity.setMatchPitchCallback(this);
-    }
 }
