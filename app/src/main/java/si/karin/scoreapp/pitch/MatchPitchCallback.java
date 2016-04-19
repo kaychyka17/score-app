@@ -1,4 +1,4 @@
-package si.karin.scoreapp;
+package si.karin.scoreapp.pitch;
 
 /**
  * Created by Karin on 18.4.2016.
