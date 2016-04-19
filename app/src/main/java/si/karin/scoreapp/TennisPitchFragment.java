@@ -1,5 +1,7 @@
 package si.karin.scoreapp;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +15,11 @@ import android.widget.TextView;
  * Created by Karin on 18.4.2016.
  */
 public class TennisPitchFragment extends PitchFragment implements MatchPitchCallback {
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        ((MainActivity)getActivity()).setMatchPitchCallback(this);
+    }
 
     /**
      * Returns a new instance of this fragment
@@ -28,7 +35,6 @@ public class TennisPitchFragment extends PitchFragment implements MatchPitchCall
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ((MainActivity)getActivity()).setMatchPitchCallback(this);
         View rootView =  super.onCreateView(inflater, container, savedInstanceState);
         imgPitch.setImageResource(R.mipmap.tennis_pitch);
         tvHome.setText(sharedPrefs.getInt("Tennis_home", 0)+"");
